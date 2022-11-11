@@ -3,20 +3,22 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
-
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    model/FileListModel.cpp \
+    view/mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h
+    common/PublicStructs.h \
+    model/FileListModel.h \
+    view/mainwindow.h
 
 FORMS += \
-    mainwindow.ui
+    view/mainwindow.ui
 
 TARGET = mvc_test
-DESTDIR = ./bin
+win32:CONFIG(debug, debug|release): {
+    DESTDIR = $$PWD/bin/debug
+} else:win32:CONFIG(release, debug|release): {
+    DESTDIR = $$PWD/bin/release
+}
