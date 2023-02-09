@@ -10,21 +10,10 @@ class FileListModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    explicit FileListModel(QList<FileInfo> list, QObject *parent = nullptr);
-
-    // Header:
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
-
-    bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole) override;
+    explicit FileListModel(QList<tty::FileInfo> list, QObject *parent = nullptr);
 
     // Basic functionality:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-
-    // Fetch data dynamically:
-    bool hasChildren(const QModelIndex &parent = QModelIndex()) const override;
-
-    bool canFetchMore(const QModelIndex &parent) const override;
-    void fetchMore(const QModelIndex &parent) override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
@@ -41,7 +30,7 @@ public:
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
 
 private:
-    QList<FileInfo> fileList_;
+    QList<tty::FileInfo> fileList_;
 };
 
 #endif // FILELISTMODEL_H
