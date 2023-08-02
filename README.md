@@ -4,3 +4,14 @@
 ### mvc_test
 mvc模型demo
 ![mvc_example.png](https://cdn.jsdelivr.net/gh/cccccrz/cccccrz.github.io@main/source/img/mvc_example.png)
+
+
+
+### ttyDemo
+
+守护进程和弹窗tips
+
+
+
+### qml
+
