@@ -1,0 +1,10 @@
+﻿module TControls
+
+TButton          1.0    TButton.qml
+TWindow          1.0    TWindow.qml
+TBusyIndicator   1.0    TBusyIndicator.qml
+TCheckBox        1.0    TCheckBox.qml
+TCheckDelegate   1.0    TCheckDelegate.qml
+TComboBox        1.0    TComboBox.qml
+TDelayButton     1.0    TDelayButton.qml
+TDial            1.0    TDial.qml
