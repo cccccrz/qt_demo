@@ -12,6 +12,7 @@ bool AppLive::start(int port)
         connect(socket_, &QUdpSocket::readyRead, this, &AppLive::readData);
         qDebug() << TIMEMS << "Start AppLive Ok";
     }
+    return ok;
 }
 
 bool AppLive::quitDaemon()
