@@ -15,3 +15,8 @@ mvc模型demo
 
 ### qml
 
+qml 自定义控件
+
+![qml-custom-control.png](https://cdn.jsdelivr.net/gh/cccccrz/cccccrz.github.io@main/source/img/qml-custom-control.png)
+
+![qml-custom-tbtn.png](https://cdn.jsdelivr.net/gh/cccccrz/cccccrz.github.io@main/source/img/qml-custom-tbtn.png)
