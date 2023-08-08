@@ -1,4 +1,5 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    mychart
+    custom-controls \
+#    mychart

@@ -1,2 +1,4 @@
 *.user
 *bin*
+/build-qml-Desktop_Qt_5_15_2_MSVC2019_64bit_c7ff37-Debug
+/build-*

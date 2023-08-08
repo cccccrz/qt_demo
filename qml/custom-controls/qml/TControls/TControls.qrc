@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/qml/TControls">
+        <file>qmldir</file>
+        <file>TButton.qml</file>
+        <file>TWindow.qml</file>
+        <file>TBusyIndicator.qml</file>
+        <file>TCheckBox.qml</file>
+        <file>TCheckDelegate.qml</file>
+        <file>TComboBox.qml</file>
+        <file>TDelayButton.qml</file>
+        <file>TDial.qml</file>
+    </qresource>
+</RCC>
