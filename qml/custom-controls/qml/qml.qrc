@@ -2,5 +2,7 @@
     <qresource prefix="/qml">
         <file>main.qml</file>
         <file>testTButton.qml</file>
+        <file>ScreenTools/qmldir</file>
+        <file>ScreenTools/ScreenTools.qml</file>
     </qresource>
 </RCC>

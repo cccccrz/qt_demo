@@ -1,5 +1,20 @@
 ﻿#include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include "ScreenToolsController.h"
+#include "QGCPalette.h"
+
+static QObject* screenToolsControllerSingletonFactory(QQmlEngine*, QJSEngine*)
+{
+    ScreenToolsController* screenToolsController = new ScreenToolsController;
+    return screenToolsController;
+}
+
+void registerQmlType()
+{
+    qmlRegisterType<QGCPalette>     ("QGroundControl.Palette", 1, 0, "QGCPalette");
+
+    qmlRegisterSingletonType<ScreenToolsController>     ("QGroundControl.ScreenToolsController",    1, 0, "ScreenToolsController",  screenToolsControllerSingletonFactory);
+}
 
 int main(int argc, char *argv[])
 {
@@ -11,6 +26,9 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     engine.addImportPath("qrc:/qml");
+
+    registerQmlType();
+
 #ifdef TEST_TBTN
     const QUrl url(QStringLiteral("qrc:/qml/testTButton.qml"));
 #else

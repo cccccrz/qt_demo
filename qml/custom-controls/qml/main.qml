@@ -3,13 +3,23 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 
 import TControls 1.0
+import ScreenTools 1.0
+import QGroundControl.Palette 1.0
 
 TWindow {
     id: _root
     minimumWidth: 400; minimumHeight: 600
 
+    Component.onCompleted: {
+        console.log(ScreenTools.isAndroid)
+        console.log(ScreenTools.defaultFontPixelWidth)
+        console.log(qgcPal.text, qgcPal.button, qgcPal.buttonHighlightTextColors)
+    }
+
+    QGCPalette { id: qgcPal }
+
     Flickable {
-        anchors.margins: 10
+        anchors.margins: ScreenTools.defaultFontPixelWidth
         anchors.fill: parent
         contentWidth: parent.width - 20
         contentHeight: _mainLayout.height
